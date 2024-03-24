@@ -25,15 +25,15 @@ let posts = [
     },
 ]
 
-app.get("https://backened-2.vercel.app/posts/new",(req,res)=>{
+app.get("/posts/new",(req,res)=>{
     res.render(`form.ejs`,{posts});
 })
 
-app.get("https://backened-2.vercel.app/posts",(req,res)=>{
+app.get("/posts",(req,res)=>{
     res.render(`index.ejs`,{posts});
 })
 
-app.post("https://backened-2.vercel.app/posts",(req,res)=>{
+app.post("/posts",(req,res)=>{
     let {username,content} = req.body;
     if(!username || !content){
         return res.send("Please fill out the form")
@@ -41,10 +41,10 @@ app.post("https://backened-2.vercel.app/posts",(req,res)=>{
     else{
         posts.push({username,content}); 
         // console.log(posts)
-        res.redirect('https://backened-2.vercel.app/posts');
+        res.redirect('/posts');
     }
 })
 
-// app.listen(port, () => {
-//     console.log(`Server is running on http://localhost:${port}`)
-// });
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`)
+});
