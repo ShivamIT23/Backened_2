@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card{
+    border-radius: 8%;
+    padding: 1.4rem;
+    margin: 2rem;
+    min-width: 250px;
+    background-color: beige;
+}
+
+.Body-head-form{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 3rem 1rem 2rem;
+}
+
+.Body-head-form>a>button{
+    padding: 0.4rem;
+    background-color: white;
+    font-weight: 550;
+    border: 0.25rem solid #746f6f;
+    cursor: pointer;
+    border-radius: 5%;
+}
